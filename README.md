@@ -77,6 +77,8 @@ Used the following steps to cluster the cryptocurrencies for the best value for 
 1. Using the original scaled DataFrame, performed a PCA and reduced the features to three principal components. 
 2. Retrieved the explained variance to determine how much information can be attributed to each principal component and then answered the following question in my notebook:
 
+<img src="Resources/pca_explained_variance.png" alt="PCA Explained Variance" width=100%>
+
 > **Question:  What is the total explained variance of the three principal components?**
 >
 > **Answer:  The total explained variance of the three principal components is .895**
@@ -123,6 +125,9 @@ Used the following steps to cluster the cryptocurrencies for the best value for 
 **Step 7: Determine the Weights of Each Feature on Each Principal Component**  
 
 1. Created a DataFrame that shows the weights of each feature (column) for each principal component by using the columns from the original scaled DataFrame as the index.
+
+<img src="Resources/pca_weights.png" alt="PCA Weights" width=100%>
+
 2. Answered the following question in my notebook:
 
 > **Question:  Which features have the strongest positive or negative influence on each component?**
