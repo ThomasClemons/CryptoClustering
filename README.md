@@ -35,11 +35,11 @@ This challenge had seven steps:
 - Open '**Crypto_Clustering.ipynb**' in Jupyter Notebook
 - Step through the notebook to see my data preparation and analysis by clicking the "Run" button.
 - The results are displayed after each step.
-
+---
 **Step 1: Prepare the Data**  
 1. Used the StandardScaler() module from scikit-learn to normalize the data from the CSV file.
 2. Created a DataFrame with the scaled data and set the "coin_id" index from the original DataFrame as the index for the new DataFrame.
-
+---
 **Step 2: Find the Best Value for k Using the Original Scaled DataFrame**  
 
 Used the elbow method to find the best value for k by completing the following steps:
@@ -58,7 +58,7 @@ Used the elbow method to find the best value for k by completing the following s
 >
 > **Answer:  4 - It is where the line bends and starts to flatten out** 
 > 
-
+---
 **Step 3: Cluster Cryptocurrencies with K-Means Using the Original Scaled Data**  
 
 Used the following steps to cluster the cryptocurrencies for the best value for k on the original scaled data:
@@ -67,11 +67,12 @@ Used the following steps to cluster the cryptocurrencies for the best value for 
 2. Created an instance of K-means, defined the number of clusters based on the best value of k, and then fit the model using the original scaled DataFrame.
 3. Predicted the clusters to group the cryptocurrencies using the original scaled DataFrame.
 4. Created a copy of the original data and added a new column with the predicted clusters.
-5. Created a scatterplot using pandas’ plot as follows: 
+5. Created a scatter plot using pandas’ plot as follows: 
     - Set the x-axis as "price_change_percentage_24h" and the y-axis as "price_change_percentage_7d".
 
 <img src="Resources/kmeans_scatter_plot.png" alt="K-Means Scatter Plot" width=100%>
 
+---
 **Step 4: Optimize Clusters with Principal Component Analysis**  
 
 1. Using the original scaled DataFrame, performed a PCA and reduced the features to three principal components. 
@@ -85,7 +86,7 @@ Used the following steps to cluster the cryptocurrencies for the best value for 
 > 
 
 3. Created a new DataFrame with the PCA data and set the "coin_id" index from the original DataFrame as the index for the new DataFrame.
-
+---
 **Step 5: Find the Best Value for k Using the PCA Data**  
 
 Used the elbow method on the PCA data to find the best value for k using the following steps:
@@ -108,7 +109,7 @@ Used the elbow method on the PCA data to find the best value for k using the fol
 >
 > **Answer:  No, the best 'k' value for both is 4**
 >
-
+---
 **Step 6: Cluster Cryptocurrencies with K-Means Using the PCA Data**  
 
 Used the following steps to cluster the cryptocurrencies for the best value for k on the PCA data:
@@ -122,6 +123,7 @@ Used the following steps to cluster the cryptocurrencies for the best value for 
 
 <img src="Resources/pca_scatter_plot.png" alt="PCA Scatter Plot" width=100%>
 
+---
 **Step 7: Determine the Weights of Each Feature on Each Principal Component**  
 
 1. Created a DataFrame that shows the weights of each feature (column) for each principal component by using the columns from the original scaled DataFrame as the index.
@@ -144,7 +146,7 @@ Used the following steps to cluster the cryptocurrencies for the best value for 
 >    - price_change_percentage_1y has the strongest negative influence on PCA2. 
 >    - price_change_percentage_60d and price_change_percentage_24h have the strongest negative influence on PCA3.
 >
-
+---
 ## Help
 
 - Please execute all steps in the notebook.  The results of above steps are used in subsequent steps. 
